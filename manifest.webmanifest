@@ -1,14 +1,35 @@
 {
+  "id": "./",
   "name": "Hucha",
   "short_name": "Hucha",
+  "description": "Tus gastos e ingresos, en el teléfono y sin cuentas.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#FAF6EF",
   "theme_color": "#FAF6EF",
   "lang": "es",
+  "categories": ["finance"],
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Añadir gasto",
+      "short_name": "Gasto",
+      "description": "Abre Hucha con un gasto nuevo",
+      "url": "./?nuevo=gasto",
+      "icons": [{ "src": "shortcut-gasto.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Añadir ingreso",
+      "short_name": "Ingreso",
+      "description": "Abre Hucha con un ingreso nuevo",
+      "url": "./?nuevo=ingreso",
+      "icons": [{ "src": "shortcut-ingreso.png", "sizes": "192x192", "type": "image/png" }]
+    }
   ]
 }
