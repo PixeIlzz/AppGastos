@@ -1,5 +1,5 @@
 // Cambia la versión cada vez que subas cambios para forzar la actualización.
-const CACHE = 'hucha-v1';
+const CACHE = 'hucha-v2';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', e => {

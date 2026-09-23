@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hucha",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "const h=require('http'),fs=require('fs'),p=require('path');const T={'.html':'text/html; charset=utf-8','.js':'text/javascript','.webmanifest':'application/manifest+json','.png':'image/png','.json':'application/json','.svg':'image/svg+xml'};h.createServer((q,s)=>{let u=decodeURIComponent(q.url.split('?')[0]);if(u.endsWith('/'))u+='index.html';const f=p.join(process.cwd(),p.normalize(u));if(!f.startsWith(process.cwd())){s.writeHead(403);return s.end()}fs.readFile(f,(e,d)=>{if(e){s.writeHead(404);return s.end('404')}s.writeHead(200,{'Content-Type':T[p.extname(f)]||'application/octet-stream','Cache-Control':'no-store'});s.end(d)})}).listen(8765,()=>console.log('http://localhost:8765'))"],
+      "port": 8765
+    }
+  ]
+}
